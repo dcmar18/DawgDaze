@@ -1,11 +1,18 @@
 body {
-    background-image: url("https://www.uwdawgdaze.com/wp-content/themes/uw/images/ddheader2021allevents.jpg");
+    background-image: url("./BackgroundBallons.jpg");
     background-repeat: repeat;
     background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
 }
 
-.cards {
+.cards { 
     width: 100%;
+}
+
+.template-hook{
+    grid-column: 1 / span 1;
+    grid-row: 1;
 }
 
 .card {
