@@ -1,0 +1,50 @@
+body {
+    background-image: url("https://www.uwdawgdaze.com/wp-content/themes/uw/images/ddheader2021allevents.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.cards {
+    width: 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 250px;
+    margin: 2rem;
+    background-color: #F0EDE4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.eventimg{
+   grid-column: 1 / span 1;
+   grid-row: auto;
+   
+   place-self: end;
+   align-self: end;
+}
+.eventimg img {
+    object-fit:contain;
+    max-width: 100%;
+    height: 200px;
+}
+
+.eventdetails {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    background-color: #F0EDE4;
+    padding-left: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.eventdetails img{
+    height: 25px;
+}
+
+.eventdetails p{
+    font-size: 16px;
+    height: 75px;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
