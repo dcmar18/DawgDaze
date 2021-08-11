@@ -4573,6 +4573,7 @@ var autumnevents = [{
 
 let eventsHTML = autumnevents.map(function (el) {
     let event
+    //if (el.prettydate == "Thu, Sep 23" ){
     if (el.virtual != "null") {
         event =
             `<div class="card">
@@ -4604,6 +4605,7 @@ let eventsHTML = autumnevents.map(function (el) {
 </div>`;
     return event;
     }
+//}
 });
 
 $(document).ready(function () {

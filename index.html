@@ -6,6 +6,12 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <nav>
+        <a href="All Dates">HTML</a> |
+        <a href="Sept23">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/python/">Python</a>
+      </nav>
 </head>
 
 <body id= "top"
@@ -30,8 +36,8 @@ function startScroll(){
     let id = setInterval(function() {
         window.scrollBy(0, 2);
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            // Reached end of page
-            stopScroll();
+            // Reached end of page and scroll back up
+            window.scrollTo(0, 0);
         }
     }, 50);
     return id;
@@ -40,7 +46,6 @@ function startScroll(){
 function stopScroll() {
     clearInterval(scrollerID);
     window.scrollTo(0, 0);
-    startScroll()
 }
 
 $( document ).ready(function() {
