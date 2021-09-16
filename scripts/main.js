@@ -1,4 +1,4 @@
-fetch("./data.json")
+fetch("https://github.com/dcmar18/DawgDaze/blob/main/scripts/data.json")
 .then(mockResponses => {
    return mockResponses.json();
 })
