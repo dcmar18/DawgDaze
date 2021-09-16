@@ -1,72 +1,67 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js">
-
+<html lang="en">
 <head>
-    <title> 2021 Dawg Daze All Events</title>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <nav>
-        <a href="./index.html">All Dates</a> |
-        <a href="./sept23.html">Sept23</a> |
-        <a href="Sept24">Sept24</a> |
-        <a href="Sept25">Sept25</a>
-      </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>      
 </head>
+<header>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('09/23/2021')"> Sept 23</button>
+        <button class="btn" onclick="filterSelection('09/24/2021')"> Sept 24</button>
+        <button class="btn" onclick="filterSelection('09/25/2021')"> Sept 25</button>
+        <button class="btn" onclick="filterSelection('09/26/2021')"> Sept 26</button>
+        <button class="btn" onclick="filterSelection('09/27/2021')"> Sept 27</button>
+        <button class="btn" onclick="filterSelection('09/28/2021')"> Sept 28</button>
+        <button class="btn" onclick="filterSelection('09/29/2021')"> Sept 29</button>
+        <button class="btn" onclick="filterSelection('09/30/2021')"> Sept 30</button>
+        <button class="btn" onclick="filterSelection('10/01/2021')"> Oct 1</button>
+        <button class="btn" onclick="filterSelection('10/02/2021')"> Oct 2</button>
+        <button class="btn" onclick="filterSelection('10/03/2021')"> Oct 3</button>
+        <button class="btn" onclick= stopScroll()> Stop Scroll</button>
+      </div>
+</header>
+<body>
 
-<body id= "top"
-    class="cards">
-        <body>
-            <link rel="stylesheet" href="styles.css" />
-            <script type="text/javascript" src="./scripts/filter.js"></script>
-            <div id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-                <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-                <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-                <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-                <button class="btn" onclick="filterSelection('colors')"> Colors</button>
-              </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><br />
-            <script type="text/javascript" src="./scripts/main.js"></script>
-            <script type="text/javascript" src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="./scripts/filter.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
 
 
-            <section class="template-hook">
-                <!-- Fill this section with the templated components --><br />
-            </section>
-                
-        </body>
-    </p>
-    <script>
-let scrollerID;
-let paused = true;
-let speed = 10; // 1 - Fast | 2 - Medium | 3 - Slow
-let interval = speed * 5;
+  <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
 
-function startScroll(){
-    let id = setInterval(function() {
-        window.scrollBy(0, 2);
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            // Reached end of page and scroll back up
-            window.scrollTo(0, 0);
-        }
-    }, 50);
-    return id;
-}
-
-function stopScroll() {
-    clearInterval(scrollerID);
-    window.scrollTo(0, 0);
-}
-
-$( document ).ready(function() {
-    console.log( "document loaded" );
-    //scrollerID = startScroll();
-    console.log( "document loaded" );
-})
-    </script>
+  <section class="template-hook">
+    <!-- Fill this section with the templated components --><br />
+</section>
+<script>
+    let scrollerID;
+    let paused = true;
+    let speed = 10; // 1 - Fast | 2 - Medium | 3 - Slow
+    let interval = speed * 5;
     
+    function startScroll(){
+        let id = setInterval(function() {
+            window.scrollBy(0, 2);
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                // Reached end of page and scroll back up
+                window.scrollTo(0, 0);
+            }
+        }, 50);
+        return id;
+    }
+    
+    function stopScroll() {
+        clearInterval(scrollerID);
+        window.scrollTo(0, 0);
+    }
+    
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+        scrollerID = startScroll();
+        console.log( "document loaded" );
+    })
+        </script>
 </body>
-<footer></footer>
-
 </html>
