@@ -1,6 +1,6 @@
 body {
     background-image: url("./BackgroundBallons.jpg");
-    background-repeat: repeat;
+    background-repeat: fill;
     background-attachment: fixed;
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -18,7 +18,7 @@ body {
 .card {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 250px;
+    grid-template-rows: 15rem;
     margin: 2rem;
     background-color: #F0EDE4;
     font-family: 'Open Sans', sans-serif;
@@ -27,7 +27,6 @@ body {
 .eventimg{
    grid-column: 1 / span 1;
    grid-row: auto;
-   
    place-self: end;
    align-self: end;
 }
@@ -54,4 +53,5 @@ body {
     height: 75px;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
+    margin-right: 20px;
 }
