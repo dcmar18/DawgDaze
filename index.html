@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="no-js">
 
 <head>
-    <title> 2021 Dawg Daze </title>
+    <title> 2021 Dawg Daze All Events</title>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <nav>
-        <a href="All Dates">All Dates</a> |
+        <a href="./index.html">All Dates</a> |
         <a href="./sept23.html">Sept23</a> |
         <a href="Sept24">Sept24</a> |
         <a href="Sept25">Sept25</a>
@@ -17,10 +17,20 @@
 <body id= "top"
     class="cards">
         <body>
+            <link rel="stylesheet" href="styles.css" />
+            <script type="text/javascript" src="./scripts/filter.js"></script>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+                <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+                <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+                <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+              </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><br />
             <script type="text/javascript" src="./scripts/main.js"></script>
             <script type="text/javascript" src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
-            <link rel="stylesheet" href="styles.css" />
+
+
             <section class="template-hook">
                 <!-- Fill this section with the templated components --><br />
             </section>

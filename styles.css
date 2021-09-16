@@ -1,9 +1,10 @@
 body {
-    background-image: url("./BackgroundBallons.jpg");
-    background-repeat: fill;
+    background-image: url("./images/background.png");
+    /*background-color: #F0EDE4 ;
+    background-repeat: fill;*/
     background-attachment: fixed;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 6fr 2fr;
 }
 
 .cards { 
@@ -14,13 +15,16 @@ body {
     grid-column: 1 / span 1;
     grid-row: 1;
 }
-
+.navig{
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 15rem;
+}
 .card {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 15rem;
     margin: 2rem;
-    background-color: #F0EDE4;
+    background-color: #4b2e83;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -39,7 +43,7 @@ body {
 .eventdetails {
     grid-column: 2 / span 2;
     grid-row: 1;
-    background-color: #F0EDE4;
+    background-color: #4b2e83;
     padding-left: 2rem;
     font-family: 'Open Sans', sans-serif;
 }
@@ -55,3 +59,51 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin-right: 20px;
 }
+
+.container {
+    overflow: hidden;
+  }
+  
+  .filterDiv {
+    margin: 2rem;
+    background-color: #4b2e83;
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+    /*color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;*/
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 15rem;
+    margin: 2rem;
+    background-color: #4b2e83;
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Add a light grey background on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background to the active button */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
